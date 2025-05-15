@@ -13,5 +13,12 @@ function adicionar() {
     </li>
     `
 
+    input.value = "";
+}
 
+function apagarTarefas(index) {
+    const tarefas = buscarTarefas();
+    tarefas.splice(index, 1);
+    salvarTarefas(tarefas);
+    renderizar();
 }
